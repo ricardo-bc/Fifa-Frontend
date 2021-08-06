@@ -30,8 +30,6 @@ const FifaState = props =>{
     }
     const searchTeam = async text =>{
         setLoading()
-        console.log('Entra a search Team')
-        console.log(text)
 
         const searchParams ={
             'name': text,
@@ -64,34 +62,23 @@ const FifaState = props =>{
     const getPlayers = async players => {
         setLoading()
         const res = await axios.get('http://127.0.0.1:8200/api/v1/players_list',{headers:headers})
-        console.log(res.data.players) 
         dispatch({
             type: GET_PLAYERS,
             payload: res.data.players
         })
     }
-    const getTeams = async username => {
-        setLoading()
-        const res = await axios.get('http://127.0.0.1:8200/api/v1/players_list',{headers:headers})
 
-        dispatch({
-            type: GET_PLAYER,
-            payload: res.players
-        })
-
-    }
     const getPlayer = async idplayer => {
         setLoading()
         let playerJ = {}
+        if (state.players == undefined){
+        }
         for (let player of state.players ){
             if(player.id == idplayer){
                 playerJ = player
             }
         }
 
-        console.log('playerJ')
-        console.log(idplayer)
-        console.log(playerJ)
         dispatch({
             type: GET_PLAYER,
             payload: playerJ

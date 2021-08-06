@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useContext } from 'react'
+import React, {Location, Fragment, useEffect, useContext } from 'react'
 import FifaContext from '../../context/fifa/fifaContext'
 
 import Players from '../players/Players'

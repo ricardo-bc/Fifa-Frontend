@@ -12,14 +12,10 @@ const Team = ({match}) => {
         getTeam()
         // eslint-disable-next-line
     },[])
-    console.log('Entra a team')
-    console.log(team.name)
-
-
-    console.log(team.Players.length)
+    
     if(loading) return <Spinner></Spinner>
     return (
-        <Fragment>
+        <Fragment key={team.name}>
             <Link to='/SearchTeam' className ="btn btn-light">Back To Search</Link>
             <div className="card text-center ">
                 <div className="all center">

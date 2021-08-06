@@ -5,7 +5,7 @@ import FifaContext from '../../context/fifa/fifaContext'
 const Teams =()=> {
     const fifaContext= useContext(FifaContext)
     const {loading,team}= fifaContext
-    console.log(team)
+
     if(team == undefined){
         return null
     }

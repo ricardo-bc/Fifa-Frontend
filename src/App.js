@@ -23,8 +23,7 @@ const App = () => {
               <div className = "conatiner"> 
                 <Alert alert={alert}></Alert>
                 <Switch>
-                  <Route exact path ='/' component={Home} />
-                  <Route exact path ='/PlayersList' component={PlayersList} />
+                  <Route exact path ='/' component={PlayersList} />
                   <Route exact path ='/SearchTeam' component={SearchTeam} />
 
                   <Route exact path ='/player/:login' component ={Player}/>
