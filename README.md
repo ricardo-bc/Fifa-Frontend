@@ -1,4 +1,4 @@
-# FiFa_Django_Api
+# FiFa React Frontend
 
 Para este proyecto Frontend se realizo con Rect el cual se conecta via api al proyecto backend
 
